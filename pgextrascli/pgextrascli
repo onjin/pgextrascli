@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from __future__ import print_function
-
 import sys
 
 import click
@@ -38,7 +36,7 @@ COMMANDS = [
 
 def print_commands():
     for cmd, help in COMMANDS:
-        print('{:30} {}'.format(cmd, help))
+        print('{0:30} {1}'.format(cmd, help))
 
 def to_table(records):
     table = []
@@ -74,7 +72,7 @@ def extras(cmd, list_commands, host, port, dbname, user, password):
         print_commands()
         raise SystemExit(0)
 
-    dsn = 'host={} port={} dbname={} user={} password={}'.format(
+    dsn = 'host={0} port={1} dbname={2} user={3} password={4}'.format(
         host, port, dbname, user, password
     )
 
@@ -83,7 +81,7 @@ def extras(cmd, list_commands, host, port, dbname, user, password):
             command = getattr(pg, cmd)
 
         except AttributeError:
-            print('Unknown command {}'.format(cmd), file=sys.stderr)
+            print('Unknown command {0}'.format(cmd))
             raise SystemExit(1)
 
         records = command()
@@ -92,10 +90,8 @@ def extras(cmd, list_commands, host, port, dbname, user, password):
         widths = [max(map(len, map(str, col))) for col in zip(*table)]
 
         for row in table:
-            print(
-                *(str(val).ljust(width) for val, width in zip(row, widths))
-                , sep=' '
-            )
+            line = " ".join((str(val).ljust(width) for val, width in zip(row, widths)))
+            print(line)
 
 
 if __name__ == '__main__':

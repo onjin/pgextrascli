@@ -19,7 +19,7 @@ history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 setup(
     name='pgextrascli',
-    version='0.1.0',
+    version='0.1.1',
     description='Command line for pgextras',
     long_description=readme + '\n\n' + history,
     author='Marek Wywiał',
@@ -45,6 +45,7 @@ setup(
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
         "Programming Language :: Python :: 2",
+        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
