@@ -16,6 +16,14 @@ Simple command line wrapper for https://github.com/scottwoodall/python-pgextras
 
 * Free software: BSD license
 
+Install
+-------
+
+.. code-block::
+
+  $ pip install pgextrascli
+
+
 Usage
 -----
 Usage: pgextrascli [OPTIONS] CMD
