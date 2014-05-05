@@ -22,7 +22,9 @@ Usage: pgextrascli [OPTIONS] CMD
 
 Options:
 
-$ pgextrascli --help
+.. code-block::
+
+  $ pgextrascli --help
 
   -l, --list-commands  shows available commands
   --host=HOST          database host, default: localhost
@@ -34,20 +36,21 @@ $ pgextrascli --help
 
 Available commands:
 
-$ pgextrascli -l
+.. code-block::
 
--  bloat                          Table and index bloat in your database ordered by most wasteful.
--  blocking                       Queries holding locks other queryes are qaiting to be releases
--  cache_hit                      Calculates your cache hit rate (effective databases are at 99% and up).
--  calls                          Show 10 most frequently called queries. Requires the pg_stat_statements.
--  index_usage                    Calculates your index hit rate (effective databases are at 99% and up).
--  locks                          Display queries with active locks.
--  long_running_queries           Show all queries longer than five minutes by descending duration.
--  outliers                       Show 10 queries that have longest execution time in aggregate. Requires the pg_stat_statments.
--  ps                             View active queries with execution time.
--  seq_scans                      Show the count of sequential scans by table descending by order.
--  total_table_size               Show the size of the tables (including indexes), descending by size.
--  unused_indexes                 Show unused and almost unused indexes, ordered by their size relative to the number of index scans.
--  vacuum_stats                   Show dead rows and whether an automatic vacuum is expected to be triggered.
--  version                        Get the Postgres server version.
+  $ pgextrascli -l
 
+  bloat                          Table and index bloat in your database ordered by most wasteful.
+  blocking                       Queries holding locks other queryes are qaiting to be releases
+  cache_hit                      Calculates your cache hit rate (effective databases are at 99% and up).
+  calls                          Show 10 most frequently called queries. Requires the pg_stat_statements.
+  index_usage                    Calculates your index hit rate (effective databases are at 99% and up).
+  locks                          Display queries with active locks.
+  long_running_queries           Show all queries longer than five minutes by descending duration.
+  outliers                       Show 10 queries that have longest execution time in aggregate. Requires the pg_stat_statments.
+  ps                             View active queries with execution time.
+  seq_scans                      Show the count of sequential scans by table descending by order.
+  total_table_size               Show the size of the tables (including indexes), descending by size.
+  unused_indexes                 Show unused and almost unused indexes, ordered by their size relative to the number of index scans.
+  vacuum_stats                   Show dead rows and whether an automatic vacuum is expected to be triggered.
+  version                        Get the Postgres server version.
