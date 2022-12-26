@@ -1,3 +1,3 @@
-wheel==0.22.0
+wheel==0.38.1
 pgextras==0.1.1
 click==0.1
